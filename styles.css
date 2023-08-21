@@ -13,7 +13,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     width: 400px;
-    text-align: center; 
+    text-align: center;
 }
 
 .register-form h2 {
@@ -30,7 +30,7 @@ body {
 }
 
 .register-form button {
-    width: 150px; 
+    width: 150px;
     margin: 0 auto;
     padding: 10px;
     background-color: #007bff;
@@ -45,4 +45,48 @@ body {
     text-align: start;
     font-size: 12px;
     display: block;
+}
+
+.login-form {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.login-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-form button {
+    width: 150px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
 }
