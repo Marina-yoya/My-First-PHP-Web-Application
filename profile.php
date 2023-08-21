@@ -34,20 +34,29 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Your Profile</h1>
-    <form action="profile_update.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" value="<?php echo $user['username']; ?>"><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" name="email" value="<?php echo $user['email']; ?>"><br>
-        
-        <label for="phone">Phone:</label>
-        <input type="text" name="phone" value="<?php echo $user['phone']; ?>"><br>
-        
-        <button type="submit">Update Profile</button>
-    </form>
+<div class="profile-container">
+        <h1>Welcome to Your Profile</h1>
+        <form class="profile-form" action="profile_update.php" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input class="user" type="text" name="username" value="<?php echo $user['username']; ?>">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="email" type="email" name="email" value="<?php echo $user['email']; ?>">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input class="phone" type="text" name="phone" value="<?php echo $user['phone']; ?>">
+            </div>
+            
+            <button class="update-button" type="submit">Update Profile</button>
+        </form>
+    </div>
 </body>
 </html>
