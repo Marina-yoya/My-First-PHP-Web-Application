@@ -31,6 +31,12 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 <body>
     <div class="profile-container">
         <h1>Welcome to Your Profile</h1>
+        <?php
+        if (isset($_SESSION['profile_update_success'])) {
+            echo '<p>' . $_SESSION['profile_update_success'] . '</p>';
+            unset($_SESSION['profile_update_success']); 
+        }
+        ?>
 
         <form class="profile-form" action="profile_update.php" method="post">
             <div class="form-group">

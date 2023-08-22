@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $db->prepare($query);
         $stmt->execute([$newUsername, $newEmail, $newPhone, $hashedNewPassword, $user_id]);
 
+        $_SESSION['profile_update_success'] = "Profile updated successfully!";
         header("Location: profile.php");
         exit();
     } else {
