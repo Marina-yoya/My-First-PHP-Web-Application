@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
     $query = "INSERT INTO users (username, email, password, phone) VALUES (?, ?, ?, ?)";
     $stmt = $db->prepare($query);
@@ -33,5 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
+
 ?>
+
 

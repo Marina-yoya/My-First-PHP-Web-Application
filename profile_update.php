@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $db->prepare($query);
     $stmt->execute([$newUsername, $newEmail, $newPhone, $user_id]);
 
-   
+
     header("Location: profile.php");
     exit();
 }
