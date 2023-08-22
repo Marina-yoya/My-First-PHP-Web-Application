@@ -39,6 +39,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 <body>
 <div class="profile-container">
         <h1>Welcome to Your Profile</h1>
+        
         <form class="profile-form" action="profile_update.php" method="post">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -54,6 +55,16 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                 <label for="phone">Phone:</label>
                 <input class="phone" type="text" name="phone" value="<?php echo $user['phone']; ?>">
             </div>
+
+            <div class="form-group">
+            <label for="current-password">Current Password:</label>
+            <input class="current-password" type="password" name="current_password">
+        </div>
+        
+        <div class="form-group">
+            <label for="new-password">New Password:</label>
+            <input class="new-password" type="password" name="new_password">
+        </div>
             
             <button class="update-button" type="submit">Update Profile</button>
         </form>

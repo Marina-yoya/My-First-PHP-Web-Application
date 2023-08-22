@@ -113,7 +113,9 @@ body {
 
 .user,
 .email,
-.phone {
+.phone,
+.current-password,
+.new-password {
     width: 97%;
     padding: 10px;
     border: 1px solid #ccc;
