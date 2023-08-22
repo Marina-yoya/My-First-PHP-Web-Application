@@ -1,20 +1,7 @@
- <!-- <?php
-$host = 'localhost';
-$dbname = 'myfirstdatabase';
-$username = 'root';
-
-
-try {
-    $db = new PDO("mysql:host=$host;dbname=$dbname", $username);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected to the database successfully!";
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-?>    -->
-
-
 <?php
+
+require_once 'config.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $db = new PDO("mysql:host=localhost;dbname=myfirstdatabase", "root");
@@ -31,8 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     echo "Registration successful! <a href='login.php'>Login here</a>";
 }
-
-
 
 ?>
 

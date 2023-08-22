@@ -1,18 +1,7 @@
 <?php
+require_once 'config.php';
 session_start();
 
-$host = 'localhost';
-$dbname = 'myfirstdatabase';
-$username = 'root';
-
-
-try {
-    $db = new PDO("mysql:host=$host;dbname=$dbname", $username);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-    exit();
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
